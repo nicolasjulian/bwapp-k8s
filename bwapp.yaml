@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bwapp-deployment
+  labels:
+    app: bwapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bwapp
+  template:
+    metadata:
+      labels:
+        app: bwapp
+    spec:
+      containers:
+      - name: bwapp
+        image: raesene/bwapp
+        ports:
+        - containerPort: 80

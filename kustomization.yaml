@@ -1,0 +1,4 @@
+resources:
+  - bwapp.yaml
+  - bwapp-ingress.yaml
+  - service.yaml
